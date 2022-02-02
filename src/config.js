@@ -5,19 +5,19 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "NFT";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
-const external_link_name = "https://www.google.com/";
-const collectionName = "CollectionName";
+const namePrefix = "CryptoYangzi";
+const description = "Crypto Yangzi Collection";
+const baseUri = "/Users/yzac/developmentzac/projects/web3/generate-nfts/build-output";
+const external_link_name = "cryptoyangzi.com";
+const collectionName = "yangzi-10k";
 
 const solanaMetadata = {
-  symbol: "YC",
-  seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  symbol: "Y",
+  seller_fee_basis_points: 500, // Define how much % you want from secondary market sales 1000 = 10%
+  external_url: "cryptoyangzi.com",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "0x74C77A2aB6DE09f428DBD4838AceeeB85c193C9E",
       share: 100,
     },
   ],
@@ -26,15 +26,14 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 100,
+    growEditionSizeTo: 10000,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "background" },
+      { name: "cloth" },
+      { name: "accessory" },
+      { name: "hair" },
+      { name: "mouth" },
+      { name: "eye" },
     ],
   },
 ];

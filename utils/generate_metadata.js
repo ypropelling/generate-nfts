@@ -1,14 +1,17 @@
 const fs = require("fs");
 const path = require("path");
 const { createCanvas, loadImage } = require("canvas");
-const basePath = process.cwd();
+// const basePath = process.cwd();
+const basePath = "/Users/yzac/developmentzac/projects/web3/generative-art-node"
 const buildDir = `${basePath}/build/json`;
-const inputDir = `${basePath}/build/images`;
+const inputDir = `${basePath}/build`;
 const {
   format,
   namePrefix,
   description,
   baseUri,
+  external_link_name,
+  collectionName,
 } = require(`${basePath}/src/config.js`);
 const console = require("console");
 const canvas = createCanvas(format.width, format.height);
@@ -132,13 +135,30 @@ const saveMetadata = (_loadedImageObject) => {
   let tempAttributes = [];
   tempAttributes.push(addRarity());
 
+  // let tempMetadata = {
+  //   name: `${namePrefix} #${shortName}`,
+  //   description: description,
+  //   image: `${baseUri}/${shortName}.png`,
+  //   edition: Number(shortName),
+  //   attributes: tempAttributes,
+  //   compiler: "HashLips Art Engine",
+  // };
   let tempMetadata = {
-    name: `${namePrefix} #${shortName}`,
+	file_path: `${baseUri}/${shortName}.png`,
+    nft_name: `${namePrefix} #${shortName}`,
+	external_link: external_link_name,
     description: description,
-    image: `${baseUri}/${shortName}.png`,
-    edition: Number(shortName),
-    attributes: tempAttributes,
-    compiler: "HashLips Art Engine",
+    collection: collectionName,
+	levels: [],
+    stats: [],
+    unlockable_content: [],
+    explicit_and_sensitive_content: false,
+    supply: 1,
+    blockchain: "Polygon",
+    price: 0.005,
+    quantity: 1,
+    edition: shortName,
+    date: Date.now(),
   };
   fs.writeFileSync(
     `${buildDir}/${shortName}.json`,
