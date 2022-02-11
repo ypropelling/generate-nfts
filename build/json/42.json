@@ -1,0 +1,36 @@
+{
+  "file_path": "/Users/yzac/developmentzac/projects/web3/generate-nfts/build-output/42.png",
+  "nft_name": "CryptoTanzu #42",
+  "external_link": "tanzu.vmware.com",
+  "description": "Crypto Tanzu Collection",
+  "collection": "TanzuNFTs",
+  "properties": [
+    {
+      "type": "background",
+      "name": "background3"
+    },
+    {
+      "type": "tanzu_frame",
+      "name": "tanzu_frame"
+    },
+    {
+      "type": "kubernetes",
+      "name": "kube4"
+    },
+    {
+      "type": "gopher",
+      "name": "gopher3"
+    }
+  ],
+  "levels": [],
+  "stats": [],
+  "unlockable_content": [],
+  "explicit_and_sensitive_content": false,
+  "supply": 1,
+  "blockchain": "Polygon",
+  "price": 0.005,
+  "quantity": 1,
+  "dna": "7ab095cae871ad02ddb59dda27c8e4f184333db3",
+  "edition": 42,
+  "date": 1644545948077
+}
