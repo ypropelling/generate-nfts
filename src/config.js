@@ -5,16 +5,16 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "CryptoYangzi";
-const description = "Crypto Yangzi Collection";
+const namePrefix = "CryptoTanzu";
+const description = "Crypto Tanzu Collection";
 const baseUri = "/Users/yzac/developmentzac/projects/web3/generate-nfts/build-output";
-const external_link_name = "cryptoyangzi.com";
-const collectionName = "yangzi-10k";
+const external_link_name = "tanzu.vmware.com";
+const collectionName = "TanzuNFTs";
 
 const solanaMetadata = {
-  symbol: "Y",
+  symbol: "T",
   seller_fee_basis_points: 500, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "cryptoyangzi.com",
+  external_url: "tanzu.vmware.com",
   creators: [
     {
       address: "0x74C77A2aB6DE09f428DBD4838AceeeB85c193C9E",
@@ -24,16 +24,26 @@ const solanaMetadata = {
 };
 
 // If you have selected Solana then the collection starts from 0 automatically
+// const layerConfigurations = [
+//   {
+//     growEditionSizeTo: 7,
+//     layersOrder: [
+//       { name: "background", number: "1"},
+//       { name: "tanzu_frame", number: "1"},
+//       { name: "kubernetes", number: "1"},
+//       { name: "gopher", number: "7" },
+//     ],
+//   },
+// ];
+
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10000,
+    growEditionSizeTo: 112,
     layersOrder: [
-      { name: "background" },
-      { name: "cloth" },
-      { name: "accessory" },
-      { name: "hair" },
-      { name: "mouth" },
-      { name: "eye" },
+      { name: "background"},
+      { name: "tanzu_frame"},
+      { name: "kubernetes"},
+      { name: "gopher"},
     ],
   },
 ];
